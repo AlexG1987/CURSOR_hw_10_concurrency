@@ -2,25 +2,25 @@ package main.java.httpserver;
 
 import java.util.Random;
 
-public class RequestHandler {
+class RequestHandler {
 
     static void start() {
-        String requestBoby = "Action: ";
+        String requestBody = "Action: ";
         String request = "";
         int r = new Random().nextInt(HttpMethods.values().length);
         HttpMethods cases = HttpMethods.values()[r];
         switch (cases) {
             case GET:
-             request = requestBoby + "GET some info";
+             request = requestBody + "GET some info";
              break;
             case POST:
-                request = requestBoby + "POST some info";
+                request = requestBody + "POST some info";
                 break;
             case PUT:
-                request = requestBoby + "PUT some info";
+                request = requestBody + "PUT some info";
                 break;
             case DELETE:
-                request = requestBoby + "DELETE some info";
+                request = requestBody + "DELETE some info";
                 break;
         }
         System.out.println(request);

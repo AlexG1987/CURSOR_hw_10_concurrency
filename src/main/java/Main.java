@@ -3,7 +3,7 @@ package main.java;
 import main.java.firemandep.FireManDepartment;
 import main.java.httpserver.Server;
 
-public class Main {
+class Main {
 
     public static void main(String[] args) {
         System.out.println("Task one - HTTP Server");
