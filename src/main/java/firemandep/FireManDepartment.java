@@ -4,7 +4,7 @@ public class FireManDepartment {
 
     public static void alarm() {
 
-        System.out.println("FireMan team is waiting for call-up!");
+        System.out.println("ALARM!!! Fire in a hole!");
         FireManThread fireManThread = new FireManThread();
         new Thread(fireManThread, "Alex").start();
         new Thread(fireManThread, "Bob").start();
