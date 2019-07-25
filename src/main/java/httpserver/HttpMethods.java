@@ -1,5 +1,5 @@
 package main.java.httpserver;
 
-public enum HttpRequest {
+public enum HttpMethods {
     GET, POST, PUT, DELETE
 }

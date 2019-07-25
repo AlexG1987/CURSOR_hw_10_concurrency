@@ -1,6 +1,6 @@
 package main.java.firemandep;
 
-public class FireManThread implements Runnable {
+class FireManThread implements Runnable {
 
     private boolean isActive;
 
