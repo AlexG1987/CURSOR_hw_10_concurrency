@@ -3,14 +3,15 @@ package main.java.httpserver;
 public class Server {
 
     public static void startServer() {
-        System.out.println("Thread: " + Thread.currentThread().getName());
-        Server server = new Server();
-        for (int i = 1; i < 10; i++)
-            try {
-                RequestHandler.start();
-                Thread.sleep(500);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+        RequestThread r = new RequestThread("RequestHandler ");
+        r.start();
+        try{
+            RequestThread.sleep(1000);
+            r.interrupt();
+            RequestThread.sleep(1000);
+        }
+        catch (InterruptedException e){
+            System.out.println("Thread has been interrupted");
+        }
     }
 }

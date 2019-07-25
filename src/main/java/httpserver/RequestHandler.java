@@ -4,7 +4,7 @@ import java.util.Random;
 
 class RequestHandler {
 
-    static void start() {
+    static void runHttpMethod() {
         String requestBody = "Action: ";
         String request = "";
         int r = new Random().nextInt(HttpMethods.values().length);
